@@ -19,11 +19,16 @@ void incrementAtIndex(const int32_t arrIndex, int32_t* arr) {
   ++arr[arrIndex];
 }
 
+void incrementAtIndex2(const int32_t arrIndex, int32_t* arr) {
+  *(arr + arrIndex) += 1;
+}
+
 int main() {
   const int32_t arrSize = 9;
   int32_t* arr = new int32_t[arrSize];
   displayArr(arrSize, arr);
   incrementAtIndex(3, arr);
+  incrementAtIndex2(4, arr);
   displayArr(arrSize, arr);
   return 0;
 
